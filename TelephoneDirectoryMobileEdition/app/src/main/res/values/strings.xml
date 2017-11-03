@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Telephone Directory Mobile Edition</string>
+    <string name="preference_file_key">com.xpeppers.nicolamargoni.telephonedirectorymobileedition.PREFERENCE_FILE_KEY</string>
+
+
+    //-- Activity Home Page --//
+    <string name="activity_home_page_name">Home Page</string>
+    <string name="button_add_new_entry_text">add new entry</string>
+
+
+    //-- Activity Add new entry --//
+    <string name="activity_add_new_entry_name">Add new entry</string>
+    <string name="edittext_firstname_hint">first name</string>
+    <string name="edittext_lastname_hint">last name</string>
+    <string name="edittext_telephone_number_hint">telephone number</string>
+    <string name="button_import_text">import from contacts</string>
+    <string name="button_add_text">add</string>
+    <string name="button_edit_text">edit</string>
+    <string name="button_save_text">save</string>
+    <string name="activity_edit_entry_name">Edit entry</string>
+
 </resources>
