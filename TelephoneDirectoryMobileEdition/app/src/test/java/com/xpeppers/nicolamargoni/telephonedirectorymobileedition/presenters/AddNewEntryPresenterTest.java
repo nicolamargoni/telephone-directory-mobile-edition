@@ -2,15 +2,11 @@ package com.xpeppers.nicolamargoni.telephonedirectorymobileedition.presenters;
 
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.Spies.SpyContacts;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.interfaces.ContactView;
-import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.interfaces.Contacts;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.interfaces.AddNewEntryView;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.Contact;
-import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.ContactItem;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 

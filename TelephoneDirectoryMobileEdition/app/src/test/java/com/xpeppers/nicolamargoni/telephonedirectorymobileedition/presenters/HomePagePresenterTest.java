@@ -2,7 +2,7 @@ package com.xpeppers.nicolamargoni.telephonedirectorymobileedition.presenters;
 
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.Spies.SpyContacts;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.interfaces.HomePageView;
-import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.ContactItem;
+import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.Contact;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -46,7 +46,7 @@ public class HomePagePresenterTest {
         public boolean onUpldateContactsCalled = false;
 
         @Override
-        public void onUpdateContacts(ArrayList<ContactItem> contacts) {
+        public void onUpdateContacts(ArrayList<Contact> contacts) {
             onUpldateContactsCalled = true;
         }
     }

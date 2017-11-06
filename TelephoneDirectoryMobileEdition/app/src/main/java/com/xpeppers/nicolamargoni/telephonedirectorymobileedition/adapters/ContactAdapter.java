@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.R;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.interfaces.ContactClickListener;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.Contact;
-import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.ContactItem;
 
 import java.util.ArrayList;
 
@@ -19,7 +18,7 @@ import butterknife.OnClick;
 
 
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder> {
-    private ArrayList<ContactItem> contacts;
+    private ArrayList<Contact> contacts;
     private ContactClickListener clickListener;
 
 
@@ -43,7 +42,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         }
     }
 
-    public ContactAdapter(ArrayList<ContactItem> contacts, ContactClickListener clickListener) {
+    public ContactAdapter(ArrayList<Contact> contacts, ContactClickListener clickListener) {
         this.contacts = contacts;
         this.clickListener = clickListener;
     }

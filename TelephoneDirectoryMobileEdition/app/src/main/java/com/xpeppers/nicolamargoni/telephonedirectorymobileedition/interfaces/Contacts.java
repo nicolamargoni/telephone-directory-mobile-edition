@@ -1,16 +1,15 @@
 package com.xpeppers.nicolamargoni.telephonedirectorymobileedition.interfaces;
 
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.Contact;
-import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.ContactItem;
 
 import java.util.ArrayList;
 
 
 public interface Contacts {
 
-    ArrayList<ContactItem> getAll();
+    ArrayList<Contact> getAll();
 
-    ArrayList<ContactItem> getAll(String query);
+    ArrayList<Contact> getAll(String query);
 
     void edit(Contact contact, int id);
 

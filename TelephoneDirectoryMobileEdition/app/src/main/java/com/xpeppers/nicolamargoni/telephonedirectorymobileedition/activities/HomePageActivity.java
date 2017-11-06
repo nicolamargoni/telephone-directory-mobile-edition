@@ -11,7 +11,7 @@ import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.R;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.adapters.ContactAdapter;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.interfaces.ContactClickListener;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.interfaces.HomePageView;
-import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.ContactItem;
+import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.Contact;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.presenters.HomePagePresenter;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.services.ContactsMemory;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.utils.Utils;
@@ -35,7 +35,7 @@ public class HomePageActivity extends AppCompatActivity implements HomePageView,
 
     private RecyclerView.LayoutManager layoutManager;
     private ContactAdapter adapter;
-    private ArrayList<ContactItem> contacts;
+    private ArrayList<Contact> contacts;
 
 
     //- Callbacks Activity lifecycle ---------------------------------------------------------------
@@ -99,7 +99,7 @@ public class HomePageActivity extends AppCompatActivity implements HomePageView,
     //- Callbacks Presenter ------------------------------------------------------------------------
 
     @Override
-    public void onUpdateContacts(ArrayList<ContactItem> list) {
+    public void onUpdateContacts(ArrayList<Contact> list) {
         contacts.clear();
         contacts.addAll(list);
         adapter.notifyDataSetChanged();

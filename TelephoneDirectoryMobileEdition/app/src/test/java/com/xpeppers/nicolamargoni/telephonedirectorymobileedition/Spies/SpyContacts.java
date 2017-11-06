@@ -2,7 +2,6 @@ package com.xpeppers.nicolamargoni.telephonedirectorymobileedition.Spies;
 
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.interfaces.Contacts;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.Contact;
-import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.ContactItem;
 
 import java.util.ArrayList;
 
@@ -12,12 +11,12 @@ public class SpyContacts implements Contacts {
     public boolean contactEdited = false;
 
     @Override
-    public ArrayList<ContactItem> getAll() {
+    public ArrayList<Contact> getAll() {
         return null;
     }
 
     @Override
-    public ArrayList<ContactItem> getAll(String query) {
+    public ArrayList<Contact> getAll(String query) {
         return null;
     }
 
@@ -27,8 +26,8 @@ public class SpyContacts implements Contacts {
     }
 
     @Override
-    public ContactItem get(int id) {
-        return new ContactItem(new Contact("Mario", "Margoni", "+39 340 456789"), id);
+    public Contact get(int id) {
+        return new Contact(new Contact("Mario", "Margoni", "+39 340 456789"), id);
     }
 
     @Override

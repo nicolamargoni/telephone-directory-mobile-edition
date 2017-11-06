@@ -2,7 +2,6 @@ package com.xpeppers.nicolamargoni.telephonedirectorymobileedition.services;
 
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.interfaces.Contacts;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.Contact;
-import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.models.ContactItem;
 import com.xpeppers.nicolamargoni.telephonedirectorymobileedition.utils.Utils;
 
 import java.util.ArrayList;
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 
 public class ContactsMemory implements Contacts {
     private static ContactsMemory instance = null;
-    private ArrayList<ContactItem> contacts;
+    private ArrayList<Contact> contacts;
 
     public static ContactsMemory getInstance() {
         if (Utils.isNull(instance)) {
@@ -24,15 +23,15 @@ public class ContactsMemory implements Contacts {
     }
 
     @Override
-    public ArrayList<ContactItem> getAll() {
+    public ArrayList<Contact> getAll() {
         return contacts;
     }
 
     @Override
-    public ArrayList<ContactItem> getAll(String query) {
-        ArrayList<ContactItem> contacts = new ArrayList<>();
+    public ArrayList<Contact> getAll(String query) {
+        ArrayList<Contact> contacts = new ArrayList<>();
 
-        for (ContactItem contact : this.contacts) {
+        for (Contact contact : this.contacts) {
             if (isMatching(contact, query)) {
                 contacts.add(contact);
             }
@@ -47,10 +46,10 @@ public class ContactsMemory implements Contacts {
     }
 
     @Override
-    public ContactItem get(int id) {
+    public Contact get(int id) {
         int i = 0;
         boolean found = false;
-        ContactItem contact = null;
+        Contact contact = null;
 
         while (i < contacts.size() && found == false) {
             if (contacts.get(i).id == id) {
@@ -65,7 +64,7 @@ public class ContactsMemory implements Contacts {
 
     @Override
     public void add(Contact contact) {
-        contacts.add(new ContactItem(contact, generateID()));
+        contacts.add(new Contact(contact, generateID()));
     }
 
     private boolean isMatching(Contact contact, String query) {
