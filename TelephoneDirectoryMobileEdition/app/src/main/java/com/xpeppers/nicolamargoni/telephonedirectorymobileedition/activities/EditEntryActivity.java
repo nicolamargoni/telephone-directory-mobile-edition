@@ -44,7 +44,6 @@ public class EditEntryActivity extends AppCompatActivity implements EditEntryVie
     @BindView(R.id.editText_telephone_number)
     EditText editText_telephoneNumber;
 
-    //- Callbacks Activity lifecycle ---------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +77,6 @@ public class EditEntryActivity extends AppCompatActivity implements EditEntryVie
             presenter = null;
     }
 
-    //- Callbacks Activity View --------------------------------------------------------------------
 
     @OnClick(R.id.button_edit)
     public void onClickAddNewEntryButton() {
@@ -88,8 +86,6 @@ public class EditEntryActivity extends AppCompatActivity implements EditEntryVie
         presenter.editEntry(contactToEdit);
     }
 
-
-    //- Implementation Interfaces  -----------------------------------------------------------------
 
     @Override
     public void setLastNameErrorText(String description) {

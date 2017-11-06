@@ -38,8 +38,6 @@ public class HomePageActivity extends AppCompatActivity implements HomePageView,
     private ArrayList<Contact> contacts;
 
 
-    //- Callbacks Activity lifecycle ---------------------------------------------------------------
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,7 +94,6 @@ public class HomePageActivity extends AppCompatActivity implements HomePageView,
         presenter.update();
     }
 
-    //- Callbacks Presenter ------------------------------------------------------------------------
 
     @Override
     public void onUpdateContacts(ArrayList<Contact> list) {
@@ -105,8 +102,6 @@ public class HomePageActivity extends AppCompatActivity implements HomePageView,
         adapter.notifyDataSetChanged();
     }
 
-
-    //- Callbacks Activity view --------------------------------------------------------------------
 
     @OnClick(R.id.button_add)
     public void onClickAddNewEntryButton() {

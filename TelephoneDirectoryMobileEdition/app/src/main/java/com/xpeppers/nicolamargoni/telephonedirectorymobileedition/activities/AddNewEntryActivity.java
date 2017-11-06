@@ -43,8 +43,6 @@ public class AddNewEntryActivity extends AppCompatActivity implements AddNewEntr
     EditText editText_telephoneNumber;
 
 
-    //- Callbacks Activity lifecycle ---------------------------------------------------------------
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +50,7 @@ public class AddNewEntryActivity extends AppCompatActivity implements AddNewEntr
 
         ButterKnife.bind(this);
 
-        if(Utils.isNull(contactPresenter)){
+        if (Utils.isNull(contactPresenter)) {
             contactPresenter = new ContactPresenter();
         }
 
@@ -74,8 +72,6 @@ public class AddNewEntryActivity extends AppCompatActivity implements AddNewEntr
     }
 
 
-    //- Callbacks Activity View --------------------------------------------------------------------
-
     @OnClick(R.id.button_add)
     public void onClickAddNewEntryButton() {
         Contact contactToInsert = new Contact(editText_firstName.getText().toString(),
@@ -84,8 +80,6 @@ public class AddNewEntryActivity extends AppCompatActivity implements AddNewEntr
         presenter.addNewEntry(contactToInsert);
     }
 
-
-    //- Implementation of Interfaces ---------------------------------------------------------------
 
     @Override
     public void setLastNameErrorText(String description) {
