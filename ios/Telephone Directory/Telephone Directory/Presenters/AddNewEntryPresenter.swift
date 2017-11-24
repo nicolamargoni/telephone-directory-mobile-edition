@@ -2,19 +2,23 @@ import Foundation
 
 class AddNewEntryPresenter{
     let contactRepository : ContactRepository!
-    let validator : Validator!
+    let contactValidator : ContactValidatorProtocol!
     let view : AddNewEntryView!
     
-    required init(contactRepository: ContactRepository, validator: Validator, view: AddNewEntryView) {
+    required init(contactRepository: ContactRepository, contactValidator: ContactValidatorProtocol, view: AddNewEntryView) {
         self.contactRepository = contactRepository
-        self.validator = validator
+        self.contactValidator = contactValidator
         self.view = view
     }
     
     func addContact(contact: Contact){
-        if validator.isValid(toValidate: contact) {
+        let contactValidation = contactValidator.validate(toValidate: contact)
+        
+        if contactValidation.isValid {
             contactRepository.add(toAdd: contact)
             view.onContactAdded(added: contact)
+        } else {
+            view.setFirstNameError(error: "first name can't be empty")
         }
     }
 }

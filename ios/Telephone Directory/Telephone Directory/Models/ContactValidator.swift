@@ -1,7 +1,15 @@
 import Foundation
 
-class ContactValidator : Validator{
-    func isValid(toValidate: Contact) -> Bool {
-        return true
+class ContactValidator : ContactValidatorProtocol{
+    func validate(toValidate contact: Contact) -> ContactValidation {
+        var contactValidation = ContactValidation()
+        
+        if(contact.firstName.isEmpty){
+            contactValidation.firstNameValidation = .notValidIsEmpty
+        } else {
+            contactValidation.firstNameValidation = .isValid
+        }
+        
+        return contactValidation
     }
 }

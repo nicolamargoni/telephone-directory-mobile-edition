@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F04AA361FC73080001A45F2 /* FirstNameValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA351FC73080001A45F2 /* FirstNameValidation.swift */; };
+		5F04AA371FC73080001A45F2 /* FirstNameValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA351FC73080001A45F2 /* FirstNameValidation.swift */; };
 		5F3CE9461FC5B08F000F871F /* InMemoryContactRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3CE9451FC5B08F000F871F /* InMemoryContactRepositoryTest.swift */; };
 		5F3CE9481FC5BAD1000F871F /* InMemoryContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3CE9471FC5BAD1000F871F /* InMemoryContactRepository.swift */; };
 		5F3CE9491FC5BAD1000F871F /* InMemoryContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3CE9471FC5BAD1000F871F /* InMemoryContactRepository.swift */; };
+		5F558DC61FC726E300B7F16A /* ContactValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F558DC51FC726E300B7F16A /* ContactValidation.swift */; };
+		5F558DC71FC726E300B7F16A /* ContactValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F558DC51FC726E300B7F16A /* ContactValidation.swift */; };
 		5F5D6A251FC6CC39001DD398 /* AddNewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5D6A241FC6CC39001DD398 /* AddNewEntryViewController.swift */; };
 		5F5D6A261FC6CC39001DD398 /* AddNewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5D6A241FC6CC39001DD398 /* AddNewEntryViewController.swift */; };
 		5F8B639E1FC48DD600EB9B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B639D1FC48DD600EB9B9A /* AppDelegate.swift */; };
@@ -34,8 +38,8 @@
 		5FDA91AF1FC5869D00D76676 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA91AE1FC5869D00D76676 /* Contact.swift */; };
 		5FDA91B01FC588EB00D76676 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA91AE1FC5869D00D76676 /* Contact.swift */; };
 		5FDA91B21FC588F000D76676 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA91AA1FC584EB00D76676 /* ContactRepository.swift */; };
-		5FDA91B51FC5896700D76676 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA91B41FC5896700D76676 /* Validator.swift */; };
-		5FDA91B61FC5896700D76676 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA91B41FC5896700D76676 /* Validator.swift */; };
+		5FDA91B51FC5896700D76676 /* ContactValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA91B41FC5896700D76676 /* ContactValidatorProtocol.swift */; };
+		5FDA91B61FC5896700D76676 /* ContactValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA91B41FC5896700D76676 /* ContactValidatorProtocol.swift */; };
 		5FDA91B81FC5945D00D76676 /* AddNewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA91B71FC5945D00D76676 /* AddNewEntryView.swift */; };
 		5FDA91B91FC5945D00D76676 /* AddNewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA91B71FC5945D00D76676 /* AddNewEntryView.swift */; };
 		5FDA91BC1FC5978B00D76676 /* AddNewEntryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA91BB1FC5978B00D76676 /* AddNewEntryPresenter.swift */; };
@@ -64,8 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F04AA351FC73080001A45F2 /* FirstNameValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameValidation.swift; sourceTree = "<group>"; };
 		5F3CE9451FC5B08F000F871F /* InMemoryContactRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContactRepositoryTest.swift; sourceTree = "<group>"; };
 		5F3CE9471FC5BAD1000F871F /* InMemoryContactRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContactRepository.swift; sourceTree = "<group>"; };
+		5F558DC51FC726E300B7F16A /* ContactValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactValidation.swift; sourceTree = "<group>"; };
 		5F5D6A241FC6CC39001DD398 /* AddNewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEntryViewController.swift; sourceTree = "<group>"; };
 		5F8B639A1FC48DD600EB9B9A /* Telephone Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telephone Directory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8B639D1FC48DD600EB9B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +97,7 @@
 		5FDA91A81FC57B4E00D76676 /* AddNewEntryPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEntryPresenterTest.swift; sourceTree = "<group>"; };
 		5FDA91AA1FC584EB00D76676 /* ContactRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepository.swift; sourceTree = "<group>"; };
 		5FDA91AE1FC5869D00D76676 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		5FDA91B41FC5896700D76676 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		5FDA91B41FC5896700D76676 /* ContactValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactValidatorProtocol.swift; sourceTree = "<group>"; };
 		5FDA91B71FC5945D00D76676 /* AddNewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEntryView.swift; sourceTree = "<group>"; };
 		5FDA91BB1FC5978B00D76676 /* AddNewEntryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEntryPresenter.swift; sourceTree = "<group>"; };
 		5FDEB5F71FC5D456002B0C68 /* StubContactRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubContactRepository.swift; sourceTree = "<group>"; };
@@ -123,6 +129,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F04AA381FC73116001A45F2 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				5F04AA351FC73080001A45F2 /* FirstNameValidation.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		5F8B63911FC48DD500EB9B9A = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +160,7 @@
 		5F8B639C1FC48DD600EB9B9A /* Telephone Directory */ = {
 			isa = PBXGroup;
 			children = (
+				5F04AA381FC73116001A45F2 /* Enums */,
 				5FDEB5FB1FC5D59B002B0C68 /* ViewControllers */,
 				5FDA91BA1FC5975700D76676 /* Presenters */,
 				5FDA91AD1FC5867A00D76676 /* Models */,
@@ -213,7 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				5FDA91AA1FC584EB00D76676 /* ContactRepository.swift */,
-				5FDA91B41FC5896700D76676 /* Validator.swift */,
+				5FDA91B41FC5896700D76676 /* ContactValidatorProtocol.swift */,
 				5FDA91B71FC5945D00D76676 /* AddNewEntryView.swift */,
 				5FD3AFB51FC5C56900DF48BC /* HomePageView.swift */,
 				5F9958461FC6DCA60019B4F5 /* AddNewEntryDelegate.swift */,
@@ -227,6 +242,7 @@
 				5FDA91AE1FC5869D00D76676 /* Contact.swift */,
 				5F3CE9471FC5BAD1000F871F /* InMemoryContactRepository.swift */,
 				5FD3AFB01FC5BF9900DF48BC /* ContactValidator.swift */,
+				5F558DC51FC726E300B7F16A /* ContactValidation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -386,11 +402,13 @@
 				5FDA91BC1FC5978B00D76676 /* AddNewEntryPresenter.swift in Sources */,
 				5FDA91AF1FC5869D00D76676 /* Contact.swift in Sources */,
 				5F5D6A251FC6CC39001DD398 /* AddNewEntryViewController.swift in Sources */,
-				5FDA91B51FC5896700D76676 /* Validator.swift in Sources */,
+				5FDA91B51FC5896700D76676 /* ContactValidatorProtocol.swift in Sources */,
+				5F558DC61FC726E300B7F16A /* ContactValidation.swift in Sources */,
 				5FD3AFB11FC5BF9900DF48BC /* ContactValidator.swift in Sources */,
 				5F3CE9481FC5BAD1000F871F /* InMemoryContactRepository.swift in Sources */,
 				5FDA91AB1FC584EB00D76676 /* ContactRepository.swift in Sources */,
 				5F8B639E1FC48DD600EB9B9A /* AppDelegate.swift in Sources */,
+				5F04AA361FC73080001A45F2 /* FirstNameValidation.swift in Sources */,
 				5FDEB5FD1FC5D67C002B0C68 /* HomePageViewController.swift in Sources */,
 				5FD3AFB61FC5C56900DF48BC /* HomePageView.swift in Sources */,
 				5F9958471FC6DCA60019B4F5 /* AddNewEntryDelegate.swift in Sources */,
@@ -403,7 +421,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDA91B61FC5896700D76676 /* Validator.swift in Sources */,
+				5F04AA371FC73080001A45F2 /* FirstNameValidation.swift in Sources */,
+				5FDA91B61FC5896700D76676 /* ContactValidatorProtocol.swift in Sources */,
 				5FD3AFB21FC5BF9900DF48BC /* ContactValidator.swift in Sources */,
 				5FDA91B01FC588EB00D76676 /* Contact.swift in Sources */,
 				5FD3AFBA1FC5C79200DF48BC /* HomePagePresenter.swift in Sources */,
@@ -421,6 +440,7 @@
 				5FD3AFAF1FC5BD9D00DF48BC /* ContactValidatorTest.swift in Sources */,
 				5F3CE9491FC5BAD1000F871F /* InMemoryContactRepository.swift in Sources */,
 				5FD3AFB71FC5C56900DF48BC /* HomePageView.swift in Sources */,
+				5F558DC71FC726E300B7F16A /* ContactValidation.swift in Sources */,
 				5F5D6A261FC6CC39001DD398 /* AddNewEntryViewController.swift in Sources */,
 				5FDA91B21FC588F000D76676 /* ContactRepository.swift in Sources */,
 			);

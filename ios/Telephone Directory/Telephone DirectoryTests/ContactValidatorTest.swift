@@ -11,10 +11,19 @@ class ContactValidatorTest: XCTestCase {
     }
 
     func testValidationAValidContact(){
-        let validator = ContactValidator()
+        let contactValidator = ContactValidator()
         let contactValidToValidate = Contact(firstName: "Mario", lastName: "Rossi", telephoneNumber: "+39 340 6710147")
+        let contactValidation = contactValidator.validate(toValidate: contactValidToValidate)
         
-        XCTAssertTrue(validator.isValid(toValidate: contactValidToValidate))
+        XCTAssertTrue(contactValidation.isValid)
+    }
+    
+    func testValidationNotValidContactWithEmptyFirstName(){
+        let contactValidator = ContactValidator()
+        let contactValidToValidate = Contact(firstName: "", lastName: "Rossi", telephoneNumber: "+39 340 6710147")
+        let contactValidation = contactValidator.validate(toValidate: contactValidToValidate)
+        
+        XCTAssertTrue(!contactValidation.isValid && contactValidation.firstNameValidation == .notValidIsEmpty)
     }
     
 }

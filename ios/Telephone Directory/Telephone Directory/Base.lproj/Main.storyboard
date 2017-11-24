@@ -83,26 +83,37 @@
                         <sections>
                             <tableViewSection id="vdL-D2-OmV">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4kg-UK-Q5N">
+                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4kg-UK-Q5N">
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4kg-UK-Q5N" id="Qif-3R-qXJ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="first name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-H7-bFV">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yml-gf-Qux">
                                                     <rect key="frame" x="10" y="10" width="355" height="23.5"/>
-                                                    <accessibility key="accessibilityConfiguration" identifier="firstName"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-H7-bFV">
+                                                            <rect key="frame" x="0.0" y="0.0" width="355" height="23.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="firstName"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first name error" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUd-3E-1AY">
+                                                            <rect key="frame" x="0.0" y="-10" width="355" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="AMa-H7-bFV" firstAttribute="top" secondItem="Qif-3R-qXJ" secondAttribute="top" constant="10" id="bts-Ca-9Uw"/>
-                                                <constraint firstItem="AMa-H7-bFV" firstAttribute="leading" secondItem="Qif-3R-qXJ" secondAttribute="leading" constant="10" id="d1q-kt-dox"/>
-                                                <constraint firstAttribute="trailing" secondItem="AMa-H7-bFV" secondAttribute="trailing" constant="10" id="ihu-Nz-dV9"/>
-                                                <constraint firstAttribute="bottom" secondItem="AMa-H7-bFV" secondAttribute="bottom" constant="10" id="me7-zF-RMr"/>
+                                                <constraint firstAttribute="trailing" secondItem="yml-gf-Qux" secondAttribute="trailing" constant="10" id="4SE-af-MAV"/>
+                                                <constraint firstItem="yml-gf-Qux" firstAttribute="leading" secondItem="Qif-3R-qXJ" secondAttribute="leading" constant="10" id="Ul6-TM-zpA"/>
+                                                <constraint firstItem="yml-gf-Qux" firstAttribute="top" secondItem="Qif-3R-qXJ" secondAttribute="top" constant="10" id="aXT-el-qPj"/>
+                                                <constraint firstAttribute="bottom" secondItem="yml-gf-Qux" secondAttribute="bottom" constant="10" id="wsb-Bb-OTw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -113,7 +124,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="last name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EWQ-Pz-Ijm">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWQ-Pz-Ijm">
                                                     <rect key="frame" x="10" y="10" width="355" height="23.5"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="lastName"/>
                                                     <nil key="textColor"/>
@@ -136,7 +147,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="telephone number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlA-DO-uMe">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="telephone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZlA-DO-uMe">
                                                     <rect key="frame" x="10" y="10" width="355" height="23.5"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="telephoneNumber"/>
                                                     <nil key="textColor"/>
@@ -173,6 +184,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="firstNameErrorLabel" destination="tUd-3E-1AY" id="2b8-Jx-lPb"/>
                         <outlet property="firstNameTextField" destination="AMa-H7-bFV" id="wCg-yr-Cvc"/>
                         <outlet property="lastNameTextField" destination="EWQ-Pz-Ijm" id="QHc-VB-0gL"/>
                         <outlet property="telephoneNumberTextField" destination="ZlA-DO-uMe" id="RfG-u9-RoZ"/>
@@ -180,7 +192,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5X-1i-JGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="74"/>
+            <point key="canvasLocation" x="804" y="73.313343328335833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5pb-Ut-fhg">

@@ -1,12 +1,21 @@
 import Foundation
 
-class StubContactValidator : Validator {
-    var valid : Bool = false
-    func isValid(toValidate: Contact) -> Bool {
-        return valid
+class StubContactValidator : ContactValidatorProtocol {
+    var firstNameValid : Bool = false
+    
+    func validate(toValidate contact: Contact) -> ContactValidation {
+        var validation = ContactValidation()
+        
+        if(firstNameValid){
+            validation.firstNameValidation = .isValid
+        } else {
+            validation.firstNameValidation = .notValidIsEmpty
+        }
+        
+        return validation
     }
     
-    func whenIsValidCalled(return result: Bool){
-        valid = result
+    func whenValidateCalled(returnFirtsNameValid firstNameValid: Bool){
+        self.firstNameValid = firstNameValid
     }
 }

@@ -1,23 +1,24 @@
 import UIKit
 
 class AddNewEntryViewController: UITableViewController, AddNewEntryView {
-
+    
     @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var firstNameErrorLabel: UILabel!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var telephoneNumberTextField: UITextField!
     
     var presenter : AddNewEntryPresenter! = nil
     var contactRepository : ContactRepository! = nil
-    var contactValidator : Validator! = nil
+    var contactValidator : ContactValidatorProtocol! = nil
     
     var addNewEntryDelegate : AddNewEntryDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         contactValidator = ContactValidator()
-        presenter = AddNewEntryPresenter(contactRepository: contactRepository, validator: contactValidator, view: self)
+        presenter = AddNewEntryPresenter(contactRepository: contactRepository, contactValidator: contactValidator, view: self)
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         firstNameTextField.becomeFirstResponder()
     }
@@ -25,7 +26,7 @@ class AddNewEntryViewController: UITableViewController, AddNewEntryView {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     @IBAction func onTouchCancel(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
@@ -38,7 +39,7 @@ class AddNewEntryViewController: UITableViewController, AddNewEntryView {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -48,6 +49,11 @@ class AddNewEntryViewController: UITableViewController, AddNewEntryView {
         addNewEntryDelegate.addNewEntryDidFinish(added: contact)
     }
     
+    func setFirstNameError(error: String) {
+        tableView.reloadData()
+        firstNameErrorLabel.text = error
+        firstNameErrorLabel.isHidden = false
+    }
     
     
     
